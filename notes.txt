@@ -1,0 +1,27 @@
+
+//for loop ==> blocking => traffic jam
+agar hume wait krwana he tu  for loop use nai hoga yh he blocking
+
+//set timeout isklie use hoga === settime out function 
+
+//set timeout is non blocking
+ settimeout(function declaration , milisecond) 
+
+//callback is non blocking
+
+** 1st is synchronous  == (blocking)
+   2nd is asynchronous  == (non -blocking)
+
+request === url(www.facebook.com)
+response == data / html ki foam me hoga
+backened hi == server he
+
+//Weather app
+open weather map , accuweather , 
+
+// function/machine for Request 
+    jquery ajax,   XMLHTTPRequest , Axios
+ 
+//promise 
+.get , .finally
+//handle ==> fumction
