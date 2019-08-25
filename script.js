@@ -9,16 +9,15 @@ axios.get('https://tk-whatsapp.herokuapp.com/messages')
     let message = response.data[index];
     
       document.querySelector("div").innerHTML += `
-      
-      <h2>${message.name}</h2>
-      <img src="${message.profilePic}">
-       <span>${message.numbUnread}</span>
-     <p>${message.number}</p>
-      <p>${message.firstLine}</p>
-      <p>${message.time}</p>
-      <hr>
+     <div id="img_div"> 
+     <img src="${message.profilePic}"> <h2>${message.name}</h2> 
+     </div>
+     <div class="content"> 
     
-  
+     <p class="time-left">${message.time}</p>
+       <span>${message.numbUnread}</span>
+      <p id="firstLine">${message.firstLine}</p>  
+    </div>
       `
   }
 })
