@@ -8,6 +8,9 @@ axios.get('https://tk-whatsapp.herokuapp.com/messages')
       //const element = response.data[i];
       let message = response.data[index];
 
+      // if(message.numbUnread>0){
+      // let messageRead=  message.numbUnread;
+      // }
       document.querySelector("div").innerHTML += `
      <div id="img_div"> 
      <img src="${message.profilePic}"> <h2>${message.name}</h2> 
@@ -15,7 +18,13 @@ axios.get('https://tk-whatsapp.herokuapp.com/messages')
      <div class="content"> 
     
      <p class="time-left">${message.time.slice(0, 8)}</p>
-       <span id="countRead">${message.numbUnread}</span>
+       <span id="countRead">${
+        // (() => {
+        //   if (message.numbUnread > 0) {
+        message.numbUnread 
+        //   }
+        // })()
+        }</span>
       <p id="firstLine">${message.firstLine}</p>  
     </div>
       `
@@ -29,5 +38,6 @@ axios.get('https://tk-whatsapp.herokuapp.com/messages')
     // always executed
     console.log("fINAL");
   });
+
 
 
